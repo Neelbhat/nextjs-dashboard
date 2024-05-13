@@ -2,32 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#myChartLegend ul {
+	list-style-type: none;
+	padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+#myChartLegend ul li {
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	/* Add cursor pointer */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#myChartLegend ul li span {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-top {
+	display: flex !important;
+	justify-content: start !important;
+}
+
+.shadow-inner-right {
+	box-shadow: inset -5px 0px 7px -1px rgba(0, 0, 0, 0.2), inset 4px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+	width: 3.5px; /* Width of the scrollbar */
+	height: 3.5px; /* Height of the scrollbar */
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb {
+	background-color: #a9a8a8;
+	border-radius: 10px; /* Rounded corners of the thumb */
 }
